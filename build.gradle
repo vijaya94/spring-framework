@@ -1,4 +1,16 @@
 plugins {
+  id "org.sonarqube" version "4.4.1.3373"
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "vijaya94_spring-framework"
+    property "sonar.organization", "vijaya94"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
+
+plugins {
 	id 'io.freefair.aspectj' version '8.4' apply false
 	// kotlinVersion is managed in gradle.properties
 	id 'org.jetbrains.kotlin.plugin.serialization' version "${kotlinVersion}" apply false
