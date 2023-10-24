@@ -13,11 +13,6 @@ pluginManager.withPlugin("kotlin") {
 	apply from: "${rootDir}/gradle/docs-dokka.gradle"
 }
 
-
-tasks.findByName("processJmhResources").configure {
-	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-}
-
 jar {
 	manifest.attributes["Implementation-Title"] = project.name
 	manifest.attributes["Implementation-Version"] = project.version
